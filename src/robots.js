@@ -59,4 +59,4 @@ export const robots = [
     username: 'Moriah.Stanton',
     email: 'Rey.Padberg@karina.biz'
   }
-];
+]

@@ -9,4 +9,8 @@ h1 {
 	font-family: 'SEGA LOGO FONT';
 	font-weight: 200;
 	color: #0ccac4;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
 }
