@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CardList from './CardList'
 import SearchBox from './SearchBox'
-import ErroBoundary from './ErrorBoundary'
+import ErrorBoundary from './ErrorBoundary'
 import './App.css'
 import { setSearchField, requestRobots } from './actions'
 import { connect } from 'react-redux'
@@ -15,9 +15,9 @@ const mapStateToProps = state => {
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
 	return {
-		onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+		onSearchChange: event => dispatch(setSearchField(event.target.value)),
 		onRequestRobots: () => dispatch(requestRobots())
 	}
 }
@@ -38,9 +38,9 @@ class App extends Component {
 			<div className='tc'>
 				<h1 className='f1'>RoboFriends</h1>
 				<SearchBox searchChange={ onSearchChange } />
-				<ErroBoundary>
+				<ErrorBoundary>
 					<CardList robots={ filteredRobots } />
-				</ErroBoundary>
+				</ErrorBoundary>
 			</div>
 		)
 	}
